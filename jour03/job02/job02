@@ -7,4 +7,5 @@ for ($cara = 0; $cara < strlen($str); $cara++){
         echo $str[$cara];
     }
 }
+
 ?>
