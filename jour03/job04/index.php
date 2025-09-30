@@ -9,4 +9,5 @@ while (isset($str[$compteur])) {
 }
 
 echo "Nombre de caractères : " . $compteur;
+
 ?>
