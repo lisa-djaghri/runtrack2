@@ -2,21 +2,25 @@
 
 $hauteur = 5;
 
-for ($i = 0; $i < $hauteur; $i++) {
+for ($exterieur = 0; $exterieur < $hauteur; $exterieur++) {
 
-    $espacesAvant = $hauteur - $i - 1;
-    
-    if ($i == 0) {
+        for ($interieur = 0; $interieur < $hauteur - $exterieur; $interieur++) {
+            echo "&nbsp;&nbsp;";
+        }
 
-        echo str_repeat('&nbsp;', $espacesAvant) . '/\\' . "<br />";
-    } elseif ($i == $hauteur - 1) {
+        echo "/";
 
-        $largeurBase = $i;
-        echo '/' . str_repeat('_', $largeurBase) . '\\' . "<br />";
-    } else {
-
-        $espacesInternes = $i * 2;
-        echo str_repeat('&nbsp;', $espacesAvant) . '/' . str_repeat('&nbsp;', $espacesInternes) . '\\' . "<br />";
+        for ($interieur = 0; $interieur < $exterieur * 2; $interieur++) {
+             echo "&nbsp;&nbsp;";
+        }
+        echo "\\"; 
+        echo "<br />";
     }
-}
+    
+     echo "/";
+
+    for ($interieur = 0; $interieur < $exterieur * 2; $interieur++) {
+            echo "_";
+        }
+        echo "\\"; 
 ?>
