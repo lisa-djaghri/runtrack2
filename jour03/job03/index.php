@@ -1,21 +1,33 @@
-<?php 
+<?php
 
 $str = "I'm sorry Dave I'm afraid I can't do that";
-$voyelles = "";
-$longueur = strlen($str);
 
-for ($i = 0; $i < $longueur; $i++) {
-    $caractere = $str[$i];
+$tableau = [];
+$positionLettre = 0;
 
-    if (
-        $caractere == 'a' || $caractere == 'e' || $caractere == 'i' ||
-        $caractere == 'o' || $caractere == 'u' || $caractere == 'y' ||
-        $caractere == 'A' || $caractere == 'E' || $caractere == 'I' ||
-        $caractere == 'O' || $caractere == 'U' || $caractere == 'Y'
-    ) {
-        $voyelles .= $caractere;
-    }
+while (isset($str[$positionLettre])) {
+    $tableau[$positionLettre] = $str[$positionLettre];
+    $positionLettre++;
 }
 
-echo $voyelles;
+$Voyelles = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+$positionLettre = 0;
+while (isset($tableau[$positionLettre])) {
+
+    $lettreActuelle = $tableau[$positionLettre];
+
+    $Voyelle = 0;
+    while (isset($listeDeVoyelles[$Voyelle])) {
+
+        if ($lettreActuelle == $listeDeVoyelles[$Voyelle]) {
+            echo $lettreActuelle;
+        }
+
+        $Voyelle++;
+    }
+
+    $positionLettre++;
+}
+
 ?>
