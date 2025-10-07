@@ -1,18 +1,29 @@
 <?php
 
-$largeur = 20; 
-$hauteur = 10; 
+$largeur = 20;
+$hauteur = 10;
 
-for ($haut = 1; $haut <= $hauteur; $haut++) {
-    for ($larg= 1; $larg <= $largeur; $larg++){
-        if ($haut == 1 || $haut == $hauteur || $larg == 1 || $larg == $largeur) {
-            echo "*";
+for ($larg= 0; $larg < $hauteur * 2; $larg++){
+            echo "_";
         }
-        else {
+
+    echo "<br />";
+
+for ($haut = 0; $haut < $largeur; $haut++) {
+
+    echo "|";
+
+    for ($larg= 0; $larg < $largeur; $larg++){
             echo "&nbsp;&nbsp;";
         }
+        echo "|<br />";
     }
-    echo "<br>";
-}
 
+    echo "|";
+
+for ($larg= 0; $larg < $hauteur * 2; $larg++){
+            echo "_";
+        }
+        
+    echo "|";
 ?>
