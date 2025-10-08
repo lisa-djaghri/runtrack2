@@ -4,14 +4,20 @@ $str = "C'est trop dur";
 $char = "r";
 
 function occurrences($str, $char) {
-    $tableau =[];
+    $nbr = 0;
     $index = 0;
-    for (isset($str($index))) {
-        $tableau[$str] = $str[$index];
-        $index++;
-
-        if ($index == $char) {
-            return $nbr;
+    
+    while ($index < strlen($str)) {
+        if ($str[$index] == $char) {
+            $nbr = $nbr + 1;
         }
+        $index = $index + 1;
     }
+    
+    return $nbr;
 }
+
+// Test de la fonction
+echo "Nombre d'occurrences de '$char' dans '$str' : " . occurrences($str, $char);
+
+?>
