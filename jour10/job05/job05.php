@@ -2,7 +2,7 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=jour09;charset=utf8', 'root', '');
 
-$requete = $bdd->query("SELECT * FROM etudiants WHERE prenom LIKE 'T%'");
+$requete = $bdd->query("SELECT * FROM etudiants WHERE TIMESTAMPDIFF(YEAR, naissance, CURDATE()) < 18;");
 ?>
 <html>
 <table>
